@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
+import Board from "./Board";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>React Lights Out Game!</h1>
+      <p>
+        The puzzle is won when when all of the lights are turned off.
+        You can click on a cell to toggle that light — but it also toggles the
+        light above it, to the left of it, to the right of it, and below it.
+      </p>
+      <div className="App-board">
+        <Board />
+      </div>
     </div>
   );
 }
